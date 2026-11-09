@@ -53,6 +53,11 @@
     .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
     .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
 
+    /* Personal Journey Split Card */
+    .about-personal-card { display: flex; gap: 2rem; align-items: center; }
+    .personal-img { width: 320px; height: 420px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
+    .personal-content { flex: 1; }
+
     /* Cards */
     .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: 0.3s; }
     .card:hover { border-color: var(--primary); transform: translateY(-3px); }
@@ -67,10 +72,12 @@
     /* Footer */
     footer { text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border); }
 
-    @media (max-width: 768px) {
+    @media (max-width: 868px) {
       .hero { flex-direction: column-reverse; text-align: center; }
       .hero-buttons { justify-content: center; }
       .nav-links { display: none; }
+      .about-personal-card { flex-direction: column; text-align: center; }
+      .personal-img { width: 100%; height: 350px; }
     }
   </style>
 </head>
@@ -110,13 +117,33 @@
     <!-- About Section -->
     <section id="about">
       <h2 class="section-title"><i class="fas fa-user-gear"></i> About Me</h2>
-      <div class="card">
+      
+      <!-- Professional Card -->
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3><i class="fas fa-microchip" style="color: var(--primary);"></i> Engineering & Quality Strategy</h3>
         <p>I specialize in modernizing legacy systems, architecting end-to-end test automation frameworks, and pioneering Generative/Agentic AI workflows to streamline testing cycles. Operating with a dual-impact approach, I lead dedicated solo project initiatives while collaborating in parallel with cross-functional enablement teams to establish company-wide quality standards, internal consulting, and hands-on mentorship across international teams (Germany, Austria & USA).</p>
-        <div class="tags" style="margin-top: 1.5rem;">
-          <span class="tag">📍 Based in Germany</span>
-          <span class="tag">🎓 B.S. Computer Science (IPESU) & Exchange Student (CAU Kiel - Germany)</span>
-          <span class="tag">🎓 B.S. Geography (UFPE)</span>
-          <span class="tag">🗣️ Portuguese (Native) | English (C1) | German (B2) | Spanish (B1)</span>
+      </div>
+
+      <!-- Personal Card with Photo -->
+      <div class="card">
+        <div class="about-personal-card">
+          <img src="profile-personal.jpg" alt="Isabela Barros in nature" class="personal-img">
+          <div class="personal-content">
+            <h3><i class="fas fa-compass" style="color: var(--primary);"></i> Personal Journey & Passions</h3>
+            <p>Pernambucana from Olinda, I have called Germany my home since March 2022. Having graduated in Geography (B.S. at UFPE), I have always been deeply passionate about geography, history, politics, and economics—blending this multidisciplinary curiosity with a successful, equally passionate transition into Software Engineering.</p>
+            <br>
+            <p>An outdoor adventurer and sports enthusiast, I am always seeking the next destination, whether it's exploring historical cities or immersing myself in nature. But above all, I am deeply passionate about the sea—an eternal connection to my coastal roots that fuels my love for travels and new cultures.</p>
+            
+            <div class="tags" style="margin-top: 1.5rem;">
+              <span class="tag">🌊 Sea Lover</span>
+              <span class="tag">📍 Based in Germany (since Mar 2022)</span>
+              <span class="tag">🇧🇷 From Olinda, Pernambuco</span>
+              <span class="tag">🎓 B.S. Computer Science & Geography</span>
+              <span class="tag">⚽ Sports & Outdoor Adventures</span>
+              <span class="tag">🌍 History & Geopolitics Enthusiast</span>
+              <span class="tag">🗣️ PT (Native) | EN (C1) | DE (B2) | ES (B1)</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
