@@ -29,7 +29,7 @@
     .nav-links a { color: var(--text-muted); text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
     .nav-links a:hover { color: var(--primary); }
 
-    /* Language Switcher (UX Enhanced) */
+    /* Language Switcher */
     .lang-switcher { display: flex; gap: 0.2rem; background: var(--card-bg); padding: 0.25rem; border-radius: 20px; border: 1px solid var(--border); }
     .lang-btn { background: none; border: none; color: var(--text-muted); padding: 0.25rem 0.55rem; border-radius: 14px; cursor: pointer; font-size: 0.78rem; font-weight: 600; transition: 0.3s; display: flex; align-items: center; gap: 0.3rem; }
     .lang-btn:hover { color: var(--primary); }
@@ -69,11 +69,15 @@
     /* Cards */
     .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: 0.3s; }
     .card:hover { border-color: var(--primary); transform: translateY(-3px); }
-    .card h3 { color: var(--text-main); margin-bottom: 0.5rem; font-size: 1.2rem; }
+    .card h3 { color: var(--text-main); margin-bottom: 0.3rem; font-size: 1.2rem; }
     .card .subtitle { color: var(--primary); font-size: 0.9rem; margin-bottom: 0.8rem; font-weight: 500; }
     .card p { color: var(--text-muted); font-size: 0.95rem; }
 
-    /* Badges / Tags (Contrast Improved) */
+    /* Testimonials UX */
+    .testimonial-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+    .quote-icon { color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; opacity: 0.8; }
+
+    /* Badges / Tags */
     .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
     .tag { background: rgba(56, 189, 248, 0.15); color: #7dd3fc; padding: 0.35rem 0.8rem; border-radius: 20px; font-size: 0.85rem; border: 1px solid rgba(56, 189, 248, 0.3); font-weight: 500; }
 
@@ -107,6 +111,7 @@
           <li><a href="#skills" data-i18n="nav-skills">Skills</a></li>
           <li><a href="#experience" data-i18n="nav-experience">Experience</a></li>
           <li><a href="#community" data-i18n="nav-community">Talks & Community</a></li>
+          <li><a href="#testimonials" data-i18n="nav-testimonials">Testimonials</a></li>
           <li><a href="#certifications" data-i18n="nav-certifications">Certifications</a></li>
         </ul>
         <div class="lang-switcher">
@@ -235,6 +240,44 @@
       </div>
     </section>
 
+    <!-- Mentorship & Testimonials Section -->
+    <section id="testimonials">
+      <h2 class="section-title"><i class="fas fa-quote-left"></i> <span data-i18n="test-title">Mentorship & Student Impact</span></h2>
+      <div class="grid-2">
+        
+        <!-- Carla Souza -->
+        <div class="card">
+          <div class="testimonial-header">
+            <div>
+              <h3>Carla Souza</h3>
+              <div class="subtitle">Quality Assurance & Test Automation Specialist @ Accenture</div>
+            </div>
+            <a href="https://www.linkedin.com/in/isabelaoliveira26/details/recommendations/" target="_blank" class="tag" style="text-decoration: none;"><i class="fab fa-linkedin"></i> Verified</a>
+          </div>
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p style="font-style: italic;" data-i18n="test-carla">
+            "Isabela was my mentor in test automation and played an essential role in my growth as a QA. Whenever a question arose or I was stuck on a project, she helped me understand the problem and find a way forward. That support made all the difference in gaining confidence and putting into practice what I was learning. Today, as a QA Analyst at Accenture, I share this learning with colleagues starting to automate. I am deeply grateful to Isabela for her patience and support throughout this stage. I highly recommend her mentorship!"
+          </p>
+        </div>
+
+        <!-- Eliane Bugatti -->
+        <div class="card">
+          <div class="testimonial-header">
+            <div>
+              <h3>Eliane Bugatti</h3>
+              <div class="subtitle">Quality Assurance Analyst & Test Lead</div>
+            </div>
+            <a href="https://www.linkedin.com/in/isabelaoliveira26/details/recommendations/" target="_blank" class="tag" style="text-decoration: none;"><i class="fab fa-linkedin"></i> Verified</a>
+          </div>
+          <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p style="font-style: italic;" data-i18n="test-eliane">
+            "Excellent mentorship experience with Isabela! As a traditional QA, I needed to understand automation to evolve, and her support was a game changer. I learned to think like a QA Automation engineer, gained fluidity in understanding test frameworks, and unlocked my technical evolution. It was essential to build the foundation and confidence I needed with code. Highly recommended!"
+          </p>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Certifications -->
     <section id="certifications">
       <h2 class="section-title"><i class="fas fa-certificate"></i> <span data-i18n="cert-title">Official Certifications</span></h2>
@@ -260,7 +303,7 @@
   <a href="#" class="back-to-top" id="backToTop" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></a>
 
   <footer>
-    <p>© 2026 Isabela de Oliveira Barros. Built with HTML & CSS on GitHub Pages.</p>
+    <p>Copyright © Isabela Barros 2026</p>
   </footer>
 
   <script>
@@ -270,6 +313,7 @@
         "nav-skills": "Skills",
         "nav-experience": "Experience",
         "nav-community": "Talks & Community",
+        "nav-testimonials": "Testimonials",
         "nav-certifications": "Certifications",
         "hero-title": "Senior QA Software Engineer & Agentic AI Specialist",
         "hero-desc": "Over 7 years of experience building scalable quality infrastructures, CI/CD Quality Gates, and leading international QA strategies across Germany, Austria, and the USA. Speaker, QA Consultant, and AI in Testing advocate.",
@@ -297,6 +341,9 @@
         "talks-desc": "Conducted internal talks and hands-on workshops educating engineering teams on building custom AI Agentic Skills, leveraging Model Context Protocol (MCP), and optimizing test automation workflows.",
         "mundo-sub": "QA Consultant & Volunteer Mentor",
         "mundo-desc": "Empowering professionals and beginners in software quality by providing career mentorship, test automation strategies, and technical guidance through the Mundo QA community.",
+        "test-title": "Mentorship & Student Impact",
+        "test-carla": "\"Isabela was my mentor in test automation and played an essential role in my growth as a QA. Whenever a question arose or I was stuck on a project, she helped me understand the problem and find a way forward. That support made all the difference in gaining confidence and putting into practice what I was learning. Today, as a QA Analyst at Accenture, I share this learning with colleagues starting to automate. I am deeply grateful to Isabela for her patience and support throughout this stage. I highly recommend her mentorship!\"",
+        "test-eliane": "\"Excellent mentorship experience with Isabela! As a traditional QA, I needed to understand automation to evolve, and her support was a game changer. I learned to think like a QA Automation engineer, gained fluidity in understanding test frameworks, and unlocked my technical evolution. It was essential to build the foundation and confidence I needed with code. Highly recommended!\"",
         "cert-title": "Official Certifications"
       },
       pt: {
@@ -304,6 +351,7 @@
         "nav-skills": "Habilidades",
         "nav-experience": "Experiência",
         "nav-community": "Palestras & Comunidade",
+        "nav-testimonials": "Depoimentos",
         "nav-certifications": "Certificações",
         "hero-title": "Engenheira Sênior de QA & Especialista em IA Agêntica",
         "hero-desc": "Mais de 7 anos de experiência construindo infraestruturas de qualidade escaláveis, Quality Gates em CI/CD e liderando estratégias internacionais de QA na Alemanha, Áustria e EUA. Palestrante, consultora de QA e defensora de IA em testes.",
@@ -331,6 +379,9 @@
         "talks-desc": "Realização de palestras internas e workshops práticos capacitando times de engenharia no desenvolvimento de Agentic Skills com IA, Model Context Protocol (MCP) e otimização de testes.",
         "mundo-sub": "Consultora de QA & Mentora Voluntária",
         "mundo-desc": "Empoderando profissionais e iniciantes em qualidade de software por meio de mentorias de carreira, estratégias de automação e orientação técnica na comunidade Mundo QA.",
+        "test-title": "Mentoria & Impacto em Alunos",
+        "test-carla": "\"A Isabela foi minha mentora em automação de testes e teve um papel essencial no meu crescimento como QA. Sempre que surgia uma dúvida ou eu travava em algum projeto, ela me ajudava a entender o problema e a encontrar um caminho para seguir. Esse apoio fez toda a diferença para eu ganhar confiança e aplicar na prática o que estava aprendendo. Hoje, como analista de testes na Accenture, compartilho esse aprendizado com colegas que estão começando a automatizar. Sou muito grata à Isabela pela paciência e pelo apoio ao longo dessa etapa. Recomendo a mentoria dela a quem quer começar na área de QA ou evoluir!\"",
+        "test-eliane": "\"Excelente a mentoria que tive com a Isabela! Como QA tradicional, eu precisava entender de automação para evoluir, e esse suporte foi o divisor de águas. Aprendi a pensar como um QA Automation, ganhei muita fluidez para entender frameworks de testes e destravei minha evolução técnica. Foi essencial para me dar a base e a confiança que eu precisava com código. Recomendo!\"",
         "cert-title": "Certificações Oficiais"
       },
       de: {
@@ -338,6 +389,7 @@
         "nav-skills": "Fähigkeiten",
         "nav-experience": "Erfahrung",
         "nav-community": "Vorträge & Community",
+        "nav-testimonials": "Empfehlungen",
         "nav-certifications": "Zertifizierungen",
         "hero-title": "Senior QA Software Engineer & Agentic AI Specialist",
         "hero-desc": "Über 7 Jahre Erfahrung im Aufbau skalierbarer Qualitätsinfrastrukturen, CI/CD Quality Gates und der Leitung internationaler QA-Strategien in Deutschland, Österreich und den USA. Speakerin, QA-Consultant und Verfechterin von KI im Testing.",
@@ -365,6 +417,9 @@
         "talks-desc": "Durchführung interner Vorträge und praktischer Workshops zur Weiterbildung von Engineering-Teams in benutzerdefinierten KI-Agentic Skills und Model Context Protocol (MCP).",
         "mundo-sub": "QA Consultant & Ehrenamtliche Mentorin",
         "mundo-desc": "Unterstützung von Fachkräften und Einsteigern in der Softwarequalität durch Karriere-Mentoring und technische Beratung in der Mundo QA Community.",
+        "test-title": "Mentoring & Erfolge von Mentees",
+        "test-carla": "\"Isabela war meine Mentorin für Testautomatisierung und spielte eine entscheidende Rolle für mein Wachstum als QA. Wann immer Fragen auftauchten, half sie mir, das Problem zu verstehen und den Weg nach vorne zu finden. Heute gebe ich als QA-Analystin bei Accenture dieses Wissen weiter. Ich bin Isabela sehr dankbar!\"",
+        "test-eliane": "\"Hervorragendes Mentoring mit Isabela! Als traditionelle QA musste ich Automatisierung verstehen, und ihre Unterstützung war der Wendepunkt. Ich habe gelernt wie eine QA-Automatisierungsingenieurin zu denken und meine technische Entwicklung freigeschaltet. Sehr zu empfehlen!\"",
         "cert-title": "Offizielle Zertifizierungen"
       }
     };
